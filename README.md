@@ -50,14 +50,17 @@ An ensemble method that combines multiple decision trees to improve robustness, 
 
 
 ## Repository Structure
+
+~~~
 ransomware-ml-static-features/
-├── report/
-├── src/
+├── report/                # Final report document (DOCX)
+├── src/                   # Source code (training + evaluation scripts)
+├── results/               # Output figures (confusion matrix, plots) [optional]
 ├── .gitignore
 ├── LICENSE
 ├── README.md
 └── requirements.txt
----
+~~~
 
 ```markdown
 ## Installation
