@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+type: software
+title: "ransomware-ml-static-features"
+version: "v1.3"
+date-released: "2026-01-10"
+doi: "10.5281/zenodo.18209938"
+url: "https://doi.org/10.5281/zenodo.18209938"
+
+authors:
+  - family-names: "Guadalupe"
+    given-names: "Miguel"
+
+repository-code: "https://github.com/Recon53/ransomware-ml-static-features"
+license: "MIT"
+
+keywords:
+  - ransomware
+  - malware
+  - machine-learning
+  - cybersecurity
+  - static-analysis
