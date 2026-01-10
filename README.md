@@ -82,6 +82,8 @@ Dependencies include:
 - scikit-learn
 - matplotlib
 
+---
+
 ## Usage
 
 ### Run in demo mode (no dataset required)
@@ -101,19 +103,21 @@ python src/train_models.py --data path/to/your_dataset.csv --label-col label
 ### Output
 The script prints classification metrics (Accuracy, Precision, Recall, F1) and saves confusion matrix figures to:
 
-- results/confusion_matrix_logistic_regression.png
-- results/confusion_matrix_random_forest.png
-
+- `results/confusion_matrix_logistic_regression.png`
+- `results/confusion_matrix_random_forest.png`
 
 ---
 
 ## Results (Sample)
 
 ### Confusion Matrix (Random Forest)
+
 ![Confusion Matrix - Random Forest](results/confusion_matrix_random_forest.png)
 
 ### Accuracy (Logistic Regression vs Random Forest)
+
 ![Model Accuracy Comparison](results/model_accuracy_comparison.png)
 
 ### Top Features (Random Forest)
+
 ![Feature Importance - Random Forest](results/feature_importance_random_forest.png)
