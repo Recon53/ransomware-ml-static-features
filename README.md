@@ -118,3 +118,4 @@ The script prints classification metrics (Accuracy, Precision, Recall, F1) and s
 
 ### Top Features (Random Forest)
 ![Feature Importance - Random Forrest](results/feature_importance_random_forest.png)
+
