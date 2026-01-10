@@ -1,4 +1,8 @@
 # ransomware-ml-static-features
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Release](https://img.shields.io/badge/Release-v1.0-orange)
+
 Machine learning-based ransomware detection using static file features (Logistic Regression and Random Forest).
 ![Random Forest Confusion Matrix](results/confusion_matrix_random_forest.png)
 ---
