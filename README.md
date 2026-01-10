@@ -1,6 +1,6 @@
 # ransomware-ml-static-features
 Machine learning-based ransomware detection using static file features (Logistic Regression and Random Forest).
-
+![Random Forest Confusion Matrix](results/confusion_matrix_random_forest.png)
 ---
 
 ## Project Overview
