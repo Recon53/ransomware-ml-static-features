@@ -48,17 +48,33 @@ A strong baseline linear classifier that performs well in binary classification 
 ### 2) Random Forest (RF)
 An ensemble method that combines multiple decision trees to improve robustness, capture non-linear patterns, and reduce overfitting.
 
----
 
 ## Repository Structure
+ransomware-ml-static-features/
+├── report/
+├── src/
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+---
 
+```markdown
 ## Installation
 
 ### 1) Clone repository
-```bash
+~~~bash
 git clone https://github.com/Recon53/ransomware-ml-static-features.git
 cd ransomware-ml-static-features
+~~~
 
 ### 2) Install dependencies
-```bash
+~~~bash
 pip install -r requirements.txt
+~~~
+
+Dependencies include:
+- numpy
+- pandas
+- scikit-learn
+- matplotlib
