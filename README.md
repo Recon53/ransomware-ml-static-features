@@ -4,6 +4,8 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/stable/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Release](https://img.shields.io/badge/Release-v1.0-blueviolet.svg)](https://github.com/Recon53/ransomware-ml-static-features/releases/tag/v1.0)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18209938.svg)](https://doi.org/10.5281/zenodo.18209938)
+
 
 ## Quick Start
 ~~~bash
@@ -116,3 +118,17 @@ It also saves result images into the `results/` folder, including:
 This project was developed for academic coursework and experimentation using publicly available ML libraries such as scikit-learn.
 
 ---
+
+## Citation
+
+If you use this repository, please cite the Zenodo record:
+
+```bibtex
+@software{guadalupe_ransomware_ml_static_features_2026,
+  author       = {Guadalupe, Miguel},
+  title        = {ransomware-ml-static-features},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.18209938},
+  url          = {https://doi.org/10.5281/zenodo.18209938}
+}
