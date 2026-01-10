@@ -52,3 +52,13 @@ An ensemble method that combines multiple decision trees to improve robustness, 
 
 ## Repository Structure
 
+## Installation
+
+### 1) Clone repository
+```bash
+git clone https://github.com/Recon53/ransomware-ml-static-features.git
+cd ransomware-ml-static-features
+
+### 2) Install dependencies
+```bash
+pip install -r requirements.txt
