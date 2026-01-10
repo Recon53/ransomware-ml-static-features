@@ -13,6 +13,8 @@ python src/train_models.py
 
 Machine learning-based ransomware detection using **static file features**, evaluating **Logistic Regression** and **Random Forest** classifiers.
 
+## Preview
+![Confusion Matrix - Random Forest](results/confusion_matrix_random_forest.png)
 ---
 
 ## Project Overview
