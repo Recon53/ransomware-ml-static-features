@@ -62,7 +62,6 @@ ransomware-ml-static-features/
 └── requirements.txt
 ~~~
 
-```markdown
 ## Installation
 
 ### 1) Clone repository
@@ -82,18 +81,16 @@ Dependencies include:
 - scikit-learn
 - matplotlib
 
----
-
 ## Usage
 
-### Run in demo mode (no dataset required)
+### 1) Run in demo mode (no dataset required)
 This will generate a synthetic dataset and train/test both models.
 
 ~~~bash
 python src/train_models.py
 ~~~
 
-### Run with your dataset (CSV)
+### 2) Run with your dataset (CSV)
 Provide a path to your dataset and the label column name.
 
 ~~~bash
@@ -106,17 +103,15 @@ The script prints classification metrics (Accuracy, Precision, Recall, F1) and s
 - `results/confusion_matrix_logistic_regression.png`
 - `results/confusion_matrix_random_forest.png`
 
-~~~
-~~~
+---
 
 ## Results (Sample)
 
 ### Confusion Matrix (Random Forest)
-![Confusion Matrix - Random Forrest](results/confusion_matrix_random_forrest.png)
+![Confusion Matrix - Random Forest](results/confusion_matrix_random_forest.png)
 
 ### Accuracy (Logistic Regression vs Random Forest)
 ![Model Accuracy Comparison](results/model_accuracy_comparison.png)
 
 ### Top Features (Random Forest)
-![Feature Importance - Random Forrest](results/feature_importance_random_forrest.png
-
+![Feature Importance - Random Forest](results/feature_importance_random_forest.png)
