@@ -110,6 +110,9 @@ The script prints classification metrics (Accuracy, Precision, Recall, F1) and s
 ### Confusion Matrix (Random Forest)
 ![Confusion Matrix - Random Forest](results/confusion_matrix_random_forest.png)
 
+### Accuracy (Random Forest)
+![Model Accuracy - Random Forest](results/model_accuracy_random_forest.png)
+
 ### Accuracy (Logistic Regression vs Random Forest)
 ![Model Accuracy Comparison](results/model_accuracy_comparison.png)
 
