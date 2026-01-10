@@ -81,3 +81,25 @@ Dependencies include:
 - pandas
 - scikit-learn
 - matplotlib
+
+## Usage
+
+### Run in demo mode (no dataset required)
+This will generate a synthetic dataset and train/test both models.
+
+~~~bash
+python src/train_models.py
+~~~
+
+### Run with your dataset (CSV)
+Provide a path to your dataset and the label column name.
+
+~~~bash
+python src/train_models.py --data path/to/your_dataset.csv --label-col label
+~~~
+
+### Output
+The script prints classification metrics (Accuracy, Precision, Recall, F1) and saves confusion matrix figures to:
+
+- results/confusion_matrix_logistic_regression.png
+- results/confusion_matrix_random_forest.png
