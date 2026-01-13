@@ -101,11 +101,10 @@ It also saves result images into the `results/` folder, including:
 ## Results (Screenshots)
 
 ### Confusion Matrix (Logistic Regression)
-
-![Confusion Matrix - Logistic Regression](results/confusion_matrix_logistic_regression.png)
+<img src="results/confusion_matrix_logistic_regression.png" width="650">
 
 ### Confusion Matrix (Random Forest)
-![Confusion Matrix - Random Forest](results/confusion_matrix_random_forest.png)
+<img src="results/confusion_matrix_random_forest.png" width="650">
 
 ### Model Accuracy (Random Forest)
 ![Model Accuracy - Random Forest](results/model_accuracy_random_forest.png)
