@@ -13,7 +13,21 @@ pip install -r requirements.txt
 python src/train_models.py
 ~~~
 
+
 Machine learning-based ransomware detection using **static file features**, evaluating **Logistic Regression** and **Random Forest** classifiers.
+
+---
+### Run with your own dataset (CSV)
+
+python src/train_models.py --data data/your_dataset.csv --label-col label
+
+## Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
 
 ---
 
