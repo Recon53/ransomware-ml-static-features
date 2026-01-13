@@ -15,8 +15,6 @@ python src/train_models.py
 
 Machine learning-based ransomware detection using **static file features**, evaluating **Logistic Regression** and **Random Forest** classifiers.
 
-## Preview
-![Confusion Matrix - Random Forest](results/confusion_matrix_random_forest.png)
 ---
 
 ## Project Overview
@@ -101,6 +99,10 @@ It also saves result images into the `results/` folder, including:
 ---
 
 ## Results (Screenshots)
+
+### Confusion Matrix (Logistic Regression)
+
+![Confusion Matrix - Logistic Regression](results/confusion_matrix_logistic_regression.png)
 
 ### Confusion Matrix (Random Forest)
 ![Confusion Matrix - Random Forest](results/confusion_matrix_random_forest.png)
