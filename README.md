@@ -31,6 +31,14 @@ python src/train_models.py --data data/your_dataset.csv --label-col label
 
 ---
 
+## Results (Demo Run)
+
+- Logistic Regression Accuracy: ~0.83
+- Random Forest Accuracy: ~0.94  
+Random Forest performed better overall in this baseline experiment.
+
+---
+
 ## Project Overview
 
 Ransomware remains one of the most damaging categories of malware, capable of encrypting victim files and disrupting individuals and organizations.  
