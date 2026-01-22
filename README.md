@@ -63,6 +63,27 @@ ransomware-ml-static-features/
 
 ---
 
+## Presentation (CAP 5610)
+
+This repository includes the final course presentation and written report for the Machine Learning project **“Detection of Ransomware Using Static Features.”** The presentation summarizes the motivation, dataset, feature engineering approach, model training pipeline, evaluation metrics, and final results.
+
+### Files Included
+- **Slide Deck (PowerPoint):** `presentation/Ransomware_ML_Presentation_Miguel.pptx`
+- **Final Report (Word/PDF):** `report/Machine_Learning_Detection_of_Ransomware_Static_Features.docx`
+
+### What the Presentation Covers
+- Problem motivation: ransomware detection using machine learning
+- Dataset and static PE feature extraction
+- Models compared:
+  - Logistic Regression (baseline)
+  - Random Forest (ensemble approach)
+- Performance evaluation using:
+  - Accuracy, Precision, Recall, F1-score
+  - Confusion Matrix
+- Key takeaway:
+  - **Random Forest consistently outperformed Logistic Regression**, demonstrating that ensemble methods provide stronger performance and robustness for ransomware classification using static features.
+
+---
 ## Installation
 
 ### 1) Clone repository
