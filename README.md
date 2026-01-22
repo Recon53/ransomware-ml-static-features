@@ -71,6 +71,9 @@ This repository includes the final course presentation and written report for th
 - **Slide Deck (PowerPoint):** `presentation/Ransomware_ML_Presentation_Miguel.pptx`
 - **Final Report (Word/PDF):** `report/Ransomware_Static_Features_Report.docx`
 
+### Key Takeaway
+- **Random Forest consistently outperformed Logistic Regression**, supporting ensemble-based approaches for ransomware detection using static features.
+
 ### What the Presentation Covers
 - Problem motivation: ransomware detection using machine learning
 - Dataset and static PE feature extraction
