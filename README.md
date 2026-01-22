@@ -69,7 +69,7 @@ This repository includes the final course presentation and written report for th
 
 ### Files Included
 - **Slide Deck (PowerPoint):** `presentation/Ransomware_ML_Presentation_Miguel.pptx`
-- **Final Report (Word/PDF):** `report/Machine_Learning_Detection_of_Ransomware_Static_Features.docx`
+- **Final Report (Word/PDF):** `report/Ransomware_Static_Features_Report.docx`
 
 ### What the Presentation Covers
 - Problem motivation: ransomware detection using machine learning
