@@ -5,6 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Release](https://img.shields.io/badge/Release-v1.0-blueviolet.svg)](https://github.com/Recon53/ransomware-ml-static-features/releases/tag/v1.0)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18209938.svg)](https://doi.org/10.5281/zenodo.18209938)
+![Stars](https://img.shields.io/github/stars/Recon53/ransomware-ml-static-features)
+![Forks](https://img.shields.io/github/forks/Recon53/ransomware-ml-static-features)
+![Issues](https://img.shields.io/github/issues/Recon53/ransomware-ml-static-features)
 
 
 ## Quick Start
