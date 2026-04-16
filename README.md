@@ -1,5 +1,9 @@
-# ransomware-ml-static-features
+<p align="center">
+  <img src="banner.png" alt="Banner" width="1000">
+</p>
 
+# ransomware-ml-static-features
+---
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/stable/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -76,19 +80,27 @@ Evaluation metrics:
 
 ---
 
-# Results
+## Results
 
-### Baseline Results
-- Logistic Regression Accuracy: ~0.83  
-- Random Forest Accuracy: ~0.94  
+### Model Performance Comparison
 
-### Full Experiment Results
-- **SVM (RBF)**  
-  - Accuracy: **0.94**  
-  - ROC‑AUC: **0.9738**
-- **Random Forest**
-  - Accuracy: **0.95**
-  - Generalized well to EMBER 2018 subset (94.40%)
+| Model               | Accuracy  | ROC-AUC |
+| ------------------- | --------- | ------- |
+| Logistic Regression | 0.74–0.83 | N/A     |
+| Random Forest       | 0.95      | N/A     |
+| SVM (RBF)           | 0.94      | 0.9738  |
+| K-Nearest Neighbors | ~0.93     | N/A     |
+
+### Key Findings
+
+* **SVM (RBF)** achieved the best overall performance (ROC-AUC: 0.9738)
+* **Random Forest** achieved the highest accuracy and strong generalization
+* Static features demonstrated strong effectiveness for ransomware detection without requiring file execution
+
+### ROC Curve Highlight
+### ROC Curve Highlight
+
+The ROC analysis showed that **SVM (RBF)** delivered the strongest overall class-separation performance, achieving a **ROC-AUC of 0.9738**. This indicates excellent discrimination between benign and ransomware samples using static PE-based features alone.
 
 ### Top Features (Random Forest)
 - `registry_total`  
@@ -96,6 +108,8 @@ Evaluation metrics:
 - `total_processes`  
 - `network_dns`  
 - `EntryPoint`
+
+> These results confirm that both ensemble and kernel-based models are highly effective for ransomware detection using static PE features.
 
 ---
 
