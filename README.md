@@ -9,43 +9,34 @@
 ![Forks](https://img.shields.io/github/forks/Recon53/ransomware-ml-static-features)
 ![Issues](https://img.shields.io/github/issues/Recon53/ransomware-ml-static-features)
 
+# Overview
 
+This project applies supervised machine learning models to detect ransomware using static features extracted from Windows Portable Executable (PE) files.
+
+The goal is to evaluate how effectively static indicators can distinguish ransomware from benign software without executing the file.
+
+Static features used include:
+
+PE header values
+Section metadata
+Registry activity counters
+API/DLL import counts
+Network-related statistics
+
+These features enable safe, fast, and scalable detection.
+
+Developed as part of CAP 5610 – Machine Learning.
+
+---
 ## Quick Start
 ```bash
 pip install -r requirements.txt
 python src/train_models.py
 ```
-
-# Machine Learning Detection of Ransomware Using Static Features
-
-This project investigates the use of supervised machine learning models to detect ransomware using **static PE‑based features** extracted from Windows Portable Executable (PE) files. The goal is to evaluate whether static indicators can effectively distinguish ransomware from benign software without executing the file.
-
-The project was completed as part of **CAP 5610 – Machine Learning**.
-
----
-
 ### Run with your own dataset (CSV)
 
 ```bash
 python src/train_models.py --data data/your_dataset.csv --label-col label
-```
-
----
-
-# Project Overview
-
-Ransomware is one of the most disruptive forms of malware, capable of encrypting files and halting operations across organizations. This project explores a machine learning approach to ransomware detection using **static features**, meaning the model does *not* need to execute the file.
-
-Static features used include:
-
-- PE header values  
-- Section metadata  
-- Registry activity counters  
-- API/DLL import counts  
-- Network‑related statistics  
-
-These features allow safe, fast, and scalable detection.
-
 ---
 
 # Dataset
@@ -87,7 +78,7 @@ Evaluation metrics:
 
 # Results
 
-### Demo Run (Baseline)
+### Baseline Results
 - Logistic Regression Accuracy: ~0.83  
 - Random Forest Accuracy: ~0.94  
 
