@@ -98,7 +98,6 @@ Evaluation metrics:
 * Static features demonstrated strong effectiveness for ransomware detection without requiring file execution
 
 ### ROC Curve Highlight
-### ROC Curve Highlight
 
 The ROC analysis showed that **SVM (RBF)** delivered the strongest overall class-separation performance, achieving a **ROC-AUC of 0.9738**. This indicates excellent discrimination between benign and ransomware samples using static PE-based features alone.
 
