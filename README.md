@@ -30,7 +30,16 @@ Network-related statistics
 These features enable safe, fast, and scalable detection.
 
 Developed as part of CAP 5610 – Machine Learning.
+---
+## Results Preview
 
+### SVM (RBF) Performance
+
+<p align="center">
+  <img src="results/confusion_matrix_random_forest.png" width="600">
+</p>
+
+The SVM (RBF) model achieved the best overall performance, with a **ROC-AUC of 0.9738**, demonstrating strong class separation between benign and ransomware samples using static features.
 ---
 ## Quick Start
 ```bash
