@@ -8,133 +8,177 @@
 
 
 ## Quick Start
-~~~bash
+```bash
 pip install -r requirements.txt
 python src/train_models.py
-~~~
+```
 
+# Machine Learning Detection of Ransomware Using Static Features
 
-Machine learning-based ransomware detection using **static file features**, evaluating **Logistic Regression** and **Random Forest** classifiers.
+This project investigates the use of supervised machine learning models to detect ransomware using **static PE‑based features** extracted from Windows Portable Executable (PE) files. The goal is to evaluate whether static indicators can effectively distinguish ransomware from benign software without executing the file.
+
+The project was completed as part of **CAP 5610 – Machine Learning**.
 
 ---
+
 ### Run with your own dataset (CSV)
 
+```bash
 python src/train_models.py --data data/your_dataset.csv --label-col label
-
-## Evaluation Metrics
-
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
+```
 
 ---
 
-## Results (Demo Run)
+# Project Overview
 
-- Logistic Regression Accuracy: ~0.83
+Ransomware is one of the most disruptive forms of malware, capable of encrypting files and halting operations across organizations. This project explores a machine learning approach to ransomware detection using **static features**, meaning the model does *not* need to execute the file.
+
+Static features used include:
+
+- PE header values  
+- Section metadata  
+- Registry activity counters  
+- API/DLL import counts  
+- Network‑related statistics  
+
+These features allow safe, fast, and scalable detection.
+
+---
+
+# Dataset
+
+**Ransomware Dataset 2024**
+
+- **21,752 samples**
+  - 10,876 benign
+  - 10,876 ransomware
+- Numeric PE‑based features only
+- Preprocessing removed:
+  - Hashes  
+  - Filenames  
+  - Non‑numeric identifiers  
+
+> “These values describe file behavior without needing to run the malware.”
+
+---
+
+# Models Implemented
+
+Four supervised learning models were trained and evaluated:
+
+- Logistic Regression  
+- Random Forest  
+- Support Vector Machine (RBF kernel)  
+- K‑Nearest Neighbors (k = 5)
+
+Evaluation metrics:
+
+- Accuracy  
+- Precision  
+- Recall  
+- F1‑score  
+- Confusion Matrix  
+- ROC‑AUC  
+
+---
+
+# Results
+
+### Demo Run (Baseline)
+- Logistic Regression Accuracy: ~0.83  
 - Random Forest Accuracy: ~0.94  
-Random Forest performed better overall in this baseline experiment.
+
+### Full Experiment Results
+- **SVM (RBF)**  
+  - Accuracy: **0.94**  
+  - ROC‑AUC: **0.9738**
+- **Random Forest**
+  - Accuracy: **0.95**
+  - Generalized well to EMBER 2018 subset (94.40%)
+
+### Top Features (Random Forest)
+- `registry_total`  
+- `registry_read`  
+- `total_processes`  
+- `network_dns`  
+- `EntryPoint`
 
 ---
 
-## Project Overview
+# Repository Structure
 
-Ransomware remains one of the most damaging categories of malware, capable of encrypting victim files and disrupting individuals and organizations.  
-This project explores a **machine learning (ML) approach** to ransomware detection using **static features**, meaning the model does **not** need to execute the file to make a prediction.
-
-The goal is to evaluate whether static indicators can effectively distinguish ransomware from benign software using supervised ML classifiers.
-
----
-
-## Repository Structure
-
-~~~
+```
 ransomware-ml-static-features/
-├── report/                      # Final report document (DOCX)
-├── src/                         # Source code (training + evaluation scripts)
-├── results/                     # Output figures (confusion matrix, plots)
-├── .gitignore
+├── src/                         # Training + evaluation scripts
+├── report/                      # Final report (DOCX/PDF)
+├── results/                     # Confusion matrices, ROC curves, feature importance
+├── presentation/                # Final slide deck
+├── assets/                      # Images, diagrams
+├── data/                        # Dataset placeholder
+├── requirements.txt
 ├── LICENSE
-├── README.md
-└── requirements.txt
-~~~
+└── README.md
+```
 
 ---
 
-## Presentation (CAP 5610)
+# Presentation (CAP 5610)
 
-This repository includes the final course presentation and written report for the Machine Learning project **“Detection of Ransomware Using Static Features.”** The presentation summarizes the motivation, dataset, feature engineering approach, model training pipeline, evaluation metrics, and final results.
+This repository includes the final course presentation and written report for the Machine Learning project **“Detection of Ransomware Using Static Features.”**
 
 ### Files Included
 - **Slide Deck (PowerPoint):** `presentation/Ransomware_ML_Presentation_Miguel.pptx`
 - **Final Report (Word/PDF):** `report/Ransomware_Static_Features_Report.docx`
 
 ### Key Takeaway
-- **Random Forest consistently outperformed Logistic Regression**, supporting ensemble-based approaches for ransomware detection using static features.
-
-### What the Presentation Covers
-- Problem motivation: ransomware detection using machine learning
-- Dataset and static PE feature extraction
-- Models compared:
-  - Logistic Regression (baseline)
-  - Random Forest (ensemble approach)
-- Performance evaluation using:
-  - Accuracy, Precision, Recall, F1-score
-  - Confusion Matrix
-- Key takeaway:
-  - **Random Forest consistently outperformed Logistic Regression**, demonstrating that ensemble methods provide stronger performance and robustness for ransomware classification using static features.
+**Random Forest consistently outperformed Logistic Regression**, supporting ensemble‑based approaches for ransomware detection using static features.
 
 ---
-## Installation
+
+# Installation
 
 ### 1) Clone repository
-~~~bash
+```bash
 git clone https://github.com/Recon53/ransomware-ml-static-features.git
 cd ransomware-ml-static-features
-~~~
+```
 
 ### 2) Install dependencies
-~~~bash
+```bash
 pip install -r requirements.txt
-~~~
+```
 
 Dependencies include:
-- numpy
-- pandas
-- scikit-learn
-- matplotlib
+
+- numpy  
+- pandas  
+- scikit-learn  
+- matplotlib  
 
 ---
 
-## How to Run
-
-From the repository root:
+# How to Run
 
 ### 1) Demo mode (no dataset required)
-Generates a synthetic dataset and runs the full pipeline.
-
-~~~bash
+```bash
 python src/train_models.py
-~~~
+```
 
 ### 2) Run with your dataset (CSV)
-Provide a path to your dataset and the label column name.
-
-~~~bash
+```bash
 python src/train_models.py --data path/to/your_dataset.csv --label-col label
-~~~
+```
 
 ---
 
-## Expected Output
+# Expected Output
 
 The script prints evaluation metrics such as:
-- Accuracy
-- Precision
-- Recall
-- F1-score
+
+- Accuracy  
+- Precision  
+- Recall  
+- F1‑score  
 
 It also saves result images into the `results/` folder, including:
 
@@ -144,30 +188,29 @@ It also saves result images into the `results/` folder, including:
 
 ---
 
-## Results (Screenshots)
+# Results (Screenshots)
 
 ### Confusion Matrix (Logistic Regression)
 <img src="results/confusion_matrix_logistic_regression.png" width="650">
 
----
-
 ### Confusion Matrix (Random Forest)
 <img src="results/confusion_matrix_random_forest.png" width="650">
+
 ### Model Accuracy (Random Forest)
-![Model Accuracy - Random Forest](results/model_accuracy_random_forest.png)
+<img src="results/model_accuracy_random_forest.png" width="650">
 
 ### Top Features (Random Forest)
-![Feature Importance - Random Forest](results/feature_importance_random_forest.png)
+<img src="results/feature_importance_random_forest.png" width="650">
 
 ---
 
-## Citation / Acknowledgements
+# Citation / Acknowledgements
 
-This project was developed for academic coursework and experimentation using publicly available ML libraries such as scikit-learn.
+This project was developed for academic coursework and experimentation using publicly available ML libraries such as scikit‑learn.
 
 ---
 
-## Citation
+# Citation
 
 If you use this repository, please cite the Zenodo record:
 
@@ -180,3 +223,4 @@ If you use this repository, please cite the Zenodo record:
   doi          = {10.5281/zenodo.18209938},
   url          = {https://doi.org/10.5281/zenodo.18209938}
 }
+```
