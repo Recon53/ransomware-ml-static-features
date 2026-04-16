@@ -34,12 +34,19 @@ Developed as part of CAP 5610 – Machine Learning.
 ## Results Preview
 
 ### SVM (RBF) Performance
+The SVM (RBF) model achieved the strongest overall performance (ROC-AUC: 0.9738), demonstrating excellent separation between benign and ransomware samples using static PE features.
 
 <p align="center">
-  <img src="results/confusion_matrix_random_forest.png" width="600">
+  <img src="results/roc_curve_SVM_RBF.png" width="500">
 </p>
 
-The SVM (RBF) model achieved the best overall performance, with a **ROC-AUC of 0.9738**, demonstrating strong class separation between benign and ransomware samples using static features.
+<p align="center">
+  <img src="results/confusion_matrix_SVM_RBF.png" width="500">
+</p>
+
+<p align="center"><em>ROC curve (left) and confusion matrix (right) for the SVM (RBF) model</em></p>
+
+
 ---
 ## Quick Start
 ```bash
