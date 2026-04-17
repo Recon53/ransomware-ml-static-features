@@ -53,6 +53,11 @@ The SVM (RBF) model achieved the strongest overall performance (ROC-AUC: 0.9738)
 pip install -r requirements.txt
 python src/train_models.py
 ```
+## Notebook
+
+Full workflow available here:  
+[Open Notebook](./notebooks/Final_Ransomware_Detection_Notebook.ipynb)
+
 ### Run with your own dataset (CSV)
 
 ```bash
