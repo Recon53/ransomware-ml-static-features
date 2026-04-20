@@ -1,23 +1,40 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18209938.svg)](https://doi.org/10.5281/zenodo.18209938)
+
 <p align="center">
-  <img src="banner.png" alt="Banner" width="1000">
+<img src="banner.png" alt="Banner" width="1000">
 </p>
 
-# ransomware-ml-static-features
----
-[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/stable/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v1.0-blueviolet.svg)](https://github.com/Recon53/ransomware-ml-static-features/releases/tag/v1.0)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18209938.svg)](https://doi.org/10.5281/zenodo.18209938)
-![Stars](https://img.shields.io/github/stars/Recon53/ransomware-ml-static-features)
-![Forks](https://img.shields.io/github/forks/Recon53/ransomware-ml-static-features)
-![Issues](https://img.shields.io/github/issues/Recon53/ransomware-ml-static-features)
+<h1 align="center">Ransomware Detection Using Static Machine Learning Features</h1>
+
+<p align="center">
+<em>Static PE‑based ransomware detection using supervised machine learning models.</em>
+</p>
+
+<p align="center">
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.x-blue.svg"></a>
+<a href="https://scikit-learn.org/stable/"><img src="https://img.shields.io/badge/scikit--learn-ML-orange.svg"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg"></a>
+<a href="https://github.com/Recon53/ransomware-ml-static-features/releases/tag/v1.0"><img src="https://img.shields.io/badge/Release-v1.0-blueviolet.svg"></a>
+<a href="https://doi.org/10.5281/zenodo.18209938"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18209938.svg"></a>
+<img src="https://img.shields.io/github/stars/Recon53/ransomware-ml-static-features">
+<img src="https://img.shields.io/github/forks/Recon53/ransomware-ml-static-features">
+<img src="https://img.shields.io/github/issues/Recon53/ransomware-ml-static-features">
+</p>
+
 
 # Overview
 
-This project applies supervised machine learning models to detect ransomware using static features extracted from Windows Portable Executable (PE) files.
+This project evaluates how effectively static features extracted from Windows Portable Executable (PE) files can distinguish ransomware from benign software using supervised machine learning.
 
-The goal is to evaluate how effectively static indicators can distinguish ransomware from benign software without executing the file.
+Static analysis is:
+
+Safe — no malware execution
+
+Fast — no sandboxing required
+
+Scalable — suitable for large datasets
+
+This work was developed as part of CAP 5610 – Machine Learning.
 
 Static features used include:
 
@@ -30,7 +47,7 @@ Network-related statistics
 These features enable safe, fast, and scalable detection.
 
 Developed as part of CAP 5610 – Machine Learning.
----
+
 ## Results Preview
 
 ### SVM (RBF) Performance
@@ -47,7 +64,6 @@ The SVM (RBF) model achieved the strongest overall performance (ROC-AUC: 0.9738)
 <p align="center"><em>ROC curve (left) and confusion matrix (right) for the SVM (RBF) model</em></p>
 
 
----
 ## Quick Start
 ```bash
 pip install -r requirements.txt
@@ -62,7 +78,7 @@ Full workflow available here:
 
 ```bash
 python src/train_models.py --data data/your_dataset.csv --label-col label
----
+
 
 # Dataset
 
@@ -79,7 +95,6 @@ python src/train_models.py --data data/your_dataset.csv --label-col label
 
 > “These values describe file behavior without needing to run the malware.”
 
----
 
 # Models Implemented
 
@@ -99,7 +114,6 @@ Evaluation metrics:
 - Confusion Matrix  
 - ROC‑AUC  
 
----
 
 ## Results
 
@@ -131,8 +145,6 @@ The ROC analysis showed that **SVM (RBF)** delivered the strongest overall class
 
 > These results confirm that both ensemble and kernel-based models are highly effective for ransomware detection using static PE features.
 
----
-
 # Repository Structure
 
 ```
@@ -146,9 +158,6 @@ ransomware-ml-static-features/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-```
-
----
 
 # Presentation (CAP 5610)
 
@@ -161,20 +170,17 @@ This repository includes the final course presentation and written report for th
 ### Key Takeaway
 **Random Forest consistently outperformed Logistic Regression**, supporting ensemble‑based approaches for ransomware detection using static features.
 
----
-
 # Installation
 
 ### 1) Clone repository
 ```bash
 git clone https://github.com/Recon53/ransomware-ml-static-features.git
 cd ransomware-ml-static-features
-```
+
 
 ### 2) Install dependencies
 ```bash
 pip install -r requirements.txt
-```
 
 Dependencies include:
 
@@ -190,7 +196,6 @@ Dependencies include:
 ### 1) Demo mode (no dataset required)
 ```bash
 python src/train_models.py
-```
 
 ### 2) Run with your dataset (CSV)
 ```bash
@@ -214,8 +219,6 @@ It also saves result images into the `results/` folder, including:
 - `results/model_accuracy_random_forest.png`
 - `results/feature_importance_random_forest.png`
 
----
-
 # Results (Screenshots)
 
 ### Confusion Matrix (Logistic Regression)
@@ -230,13 +233,13 @@ It also saves result images into the `results/` folder, including:
 ### Top Features (Random Forest)
 <img src="results/feature_importance_random_forest.png" width="650">
 
----
+# Conclusion
+
+This project demonstrates that static PE-based features can effectively distinguish ransomware from benign software using classical machine learning models. The SVM (RBF) and Random Forest models delivered the strongest performance, confirming that static analysis remains a powerful, safe, and scalable approach for malware detection.
 
 # Citation / Acknowledgements
 
 This project was developed for academic coursework and experimentation using publicly available ML libraries such as scikit‑learn.
-
----
 
 # Citation
 
@@ -251,4 +254,9 @@ If you use this repository, please cite the Zenodo record:
   doi          = {10.5281/zenodo.18209938},
   url          = {https://doi.org/10.5281/zenodo.18209938}
 }
-```
+```md
+# Author
+
+**Miguel Guadalupe**  
+Miami Dade College / FIU  
+For questions or collaboration, please open an issue in this repository.
