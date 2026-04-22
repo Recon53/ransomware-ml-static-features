@@ -48,20 +48,92 @@ These features enable safe, fast, and scalable detection.
 
 Developed as part of CAP 5610 – Machine Learning.
 
-## Results Preview
+## Features
+Static PE feature extraction for Windows executables
 
-### SVM (RBF) Performance
-The SVM (RBF) model achieved the strongest overall performance (ROC-AUC: 0.9738), demonstrating excellent separation between benign and ransomware samples using static PE features.
+Balanced dataset of benign vs. ransomware samples
+
+Multiple supervised ML models (SVM, Random Forest, Logistic Regression, KNN)
+
+ROC‑AUC, accuracy, precision, recall, and F1‑score evaluation
+
+Confusion matrix visualization
+
+Feature importance analysis
+
+Notebook‑based workflow + standalone Python scripts
+
+Reproducible environment with requirements.txt
+
+## Why This Matters
+Ransomware continues to be one of the most damaging and costly forms of cybercrime.
+Static analysis provides a safe, fast, and scalable way to detect malicious binaries without executing them in a sandbox. This project demonstrates that classical machine‑learning models can achieve strong detection performance using only static PE features — making it practical for real‑world security pipelines, endpoint protection, and automated malware triage.
+---
+## Project Highlights
+---
+SVM (RBF) achieved ROC‑AUC ≈ 0.97, showing strong separation between benign and ransomware samples
+
+Random Forest delivered the highest overall accuracy
+
+Feature importance analysis revealed key indicators such as registry activity, process counts, and network‑related fields
+
+Static ML‑based detection proved effective without dynamic execution or sandboxing
+
+Clean, reproducible workflow suitable for academic, research, and portfolio use
+
+## ⚙️ How to Run
+---
+1. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+2. Train all models (default dataset)
+```bash
+python src/train_models.py
+```
+3. Run with your own dataset
+```bash
+python src/train_models.py --data data/your_dataset.csv --label-col label
+```
+4. View results
+All generated plots (ROC curves, confusion matrices, feature importance) will appear in the results/ folder.
+
+## 📊 Results
+
+## 🔵 SVM (RBF) — Best Overall Performance
+The SVM (RBF) model achieved the strongest performance with ROC‑AUC: 0.9738, showing excellent separation between benign and ransomware samples.
 
 <p align="center">
-  <img src="results/roc_curve_SVM_RBF.png" width="500">
+<img src="results/roc_curve_SVM_RBF.png" width="500">
 </p>
 
 <p align="center">
-  <img src="results/confusion_matrix_SVM_RBF.png" width="500">
+<img src="results/confusion_matrix_SVM_RBF.png" width="500">
 </p>
 
-<p align="center"><em>ROC curve (left) and confusion matrix (right) for the SVM (RBF) model</em></p>
+<p align="center">
+<em>ROC curve (top) and confusion matrix (bottom) for the SVM (RBF) model</em>
+</p>
+
+## 🌲 Random Forest — Highest Accuracy
+Random Forest delivered the highest accuracy and strong performance across all metrics.
+
+<p align="center">
+<img src="results/feature_importance_RF.png" width="500">
+</p>
+
+<p align="center">
+<em>Top static PE features contributing to Random Forest predictions</em>
+</p>
+
+## 📈 Model Comparison Summary
+
+| Model | ROC‑AUC | Notes |
+|-------|---------|-------|
+| **SVM (RBF)** | ⭐ 0.9738 | Best overall performance |
+| **Random Forest** | ⭐ High | Strong accuracy + interpretability |
+| **Logistic Regression** | Moderate | Baseline linear model |
+| **KNN** | Lower | Sensitive to feature scaling |
 
 
 ## Quick Start
@@ -145,19 +217,7 @@ The ROC analysis showed that **SVM (RBF)** delivered the strongest overall class
 
 > These results confirm that both ensemble and kernel-based models are highly effective for ransomware detection using static PE features.
 
-# Repository Structure
 
-```
-ransomware-ml-static-features/
-├── src/                         # Training + evaluation scripts
-├── report/                      # Final report (DOCX/PDF)
-├── results/                     # Confusion matrices, ROC curves, feature importance
-├── presentation/                # Final slide deck
-├── assets/                      # Images, diagrams
-├── data/                        # Dataset placeholder
-├── requirements.txt
-├── LICENSE
-└── README.md
 
 # Presentation (CAP 5610)
 
@@ -202,8 +262,6 @@ python src/train_models.py
 python src/train_models.py --data path/to/your_dataset.csv --label-col label
 ```
 
----
-
 # Expected Output
 
 The script prints evaluation metrics such as:
@@ -232,6 +290,37 @@ It also saves result images into the `results/` folder, including:
 
 ### Top Features (Random Forest)
 <img src="results/feature_importance_random_forest.png" width="650">
+
+## 🔮 Future Work
+Add dynamic analysis features (API call traces, behavioral logs)
+
+Integrate additional ML models such as XGBoost and LightGBM
+
+Perform hyperparameter tuning for improved performance
+
+Expand dataset with more diverse ransomware families
+
+Add SHAP or LIME explainability visualizations
+
+Build a web dashboard for real‑time malware scoring
+
+Package the project as a pip‑installable tool
+
+Add CI/CD automation for model retraining
+
+# Repository Structure
+```
+ransomware-ml-static-features/
+├── src/                         # Training + evaluation scripts
+├── report/                      # Final report (DOCX/PDF)
+├── results/                     # Confusion matrices, ROC curves, feature importance
+├── presentation/                # Final slide deck
+├── assets/                      # Images, diagrams
+├── data/                        # Dataset placeholder
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
 
 # Conclusion
 
